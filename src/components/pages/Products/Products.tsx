@@ -62,6 +62,7 @@ export default function Products() {
 
   return (
     <div className={style.products}>
+      {error && <p style={{ color: 'red' }}>Error</p>}
       {/* {isLoading && <h3>Loading...</h3>} */}
       <Filters check={check} setCheck={setCheck} />
       <div className={style.content}>

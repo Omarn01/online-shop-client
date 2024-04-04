@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import style from './Pagination.module.scss'
 import { IData } from '../../utils/types/IData.interface'
-import { ReactNode, memo, useState } from 'react'
+import { ReactNode, memo } from 'react'
 
 interface IPagination extends IData {
   onClick: () => void

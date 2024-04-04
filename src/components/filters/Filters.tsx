@@ -3,14 +3,14 @@ import style from './Filters.module.scss'
 import { useState } from 'react'
 import Checkbox from '../ui/checkbox/Checkbox'
 
-interface IProps {
-  check: {
-    from10000to20000: boolean
-    from20000to40000: boolean
-    from40000: boolean
-  }
-  setCheck: () => void
-}
+// interface IProps {
+//   check: {
+//     from10000to20000: boolean
+//     from20000to40000: boolean
+//     from40000: boolean
+//   }
+//   setCheck: () => void
+// }
 
 export default function Filters({ check, setCheck }: any) {
   // const [check, setCheck] = useState<IProps>(checkbox)

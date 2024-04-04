@@ -3,10 +3,7 @@ import { ICard } from '../../../utils/types/products/smartphone.interface'
 import Slider from '../slider/Slider'
 import Button from '../button/Button'
 import Checkbox from '../checkbox/Checkbox'
-import { useState } from 'react'
-import { FaRegStar } from 'react-icons/fa'
-import { FaStarHalfAlt } from 'react-icons/fa'
-import { FaStar } from 'react-icons/fa6'
+
 import Rating from '../rating/Rating'
 
 export default function Card({
@@ -18,7 +15,7 @@ export default function Card({
   prices,
   description,
 }: ICard) {
-  const [isStock, setIsStock] = useState(false)
+  // const [isStock, setIsStock] = useState(false)
   const a = 1.234
   console.log(a.toFixed(2))
 
