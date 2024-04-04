@@ -9,7 +9,7 @@ import {
 import Home from '../components/pages/Home'
 import Cart from '../components/pages/Cart'
 import Favorites from '../components/pages/Favorites'
-import Products from '../components/pages/Products'
+import Products from '../components/pages/Products/Products'
 import Product from '../components/pages/Product'
 
 export const routes = [

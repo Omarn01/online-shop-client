@@ -1,0 +1,70 @@
+// @import url('styles/_variables.scss');
+
+.filters {
+  width: 20%;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  background-color: #dfdfdf;
+  border-radius: 8px;
+  width: 300px;
+  color: #333;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.handler {
+  cursor: pointer;
+  user-select: none;
+}
+.content {
+  overflow: hidden;
+
+  transition: all 1.5s ease;
+}
+
+.title {
+  font-weight: 600;
+  text-align: left;
+}
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #0093c4;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dbdbdb;
+}
+.checked {
+  box-shadow: 0 0 15px 0 #0093c4;
+  background-color: #0093c4;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item {
+  padding: 10px 5px;
+  border-radius: 5px;
+  background-color: #dbdbdb;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}

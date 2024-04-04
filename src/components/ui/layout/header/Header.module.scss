@@ -1,0 +1,111 @@
+.header {
+  height: 90px;
+  background-color: #393939;
+  color: #f9f9f9;
+
+  &_container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  @media screen and (max-width: 982px) {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.search_wrap {
+  display: flex;
+  align-items: center;
+  > input {
+    width: 500px;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    font-size: 22px;
+    @media screen and (max-width: 1200px) {
+      width: 400px;
+      font-size: 20px;
+    }
+    @media screen and (max-width: 1050px) {
+      width: 350px;
+    }
+    @media screen and (max-width: 982px) {
+      width: 300px;
+      padding: 7px 12px;
+      font-size: 18px;
+    }
+  }
+  .catalog {
+    color: #393939;
+    font-weight: 600;
+    font-size: 28px;
+    height: 45.6px;
+    width: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 0 0 5px;
+    background-color: #fff;
+    border-right: 1px solid #393939;
+    @media screen and (max-width: 1200px) {
+      height: 43.2px;
+      width: 43px;
+    }
+    @media screen and (max-width: 982px) {
+      height: 34.8px;
+      width: 35px;
+    }
+  }
+}
+
+.nav {
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @media screen and (max-width: 1070px) {
+      gap: 10px;
+    }
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba($color: #898989, $alpha: 0.3);
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      &:hover {
+        background-color: rgba($color: #898989, $alpha: 0.5);
+      }
+      > svg {
+        font-size: 20px;
+      }
+    }
+  }
+}
+.burger_menu {
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  @media screen and (max-width: 800px) {
+    display: flex;
+  }
+  > span {
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+  }
+}

@@ -30,6 +30,7 @@ export interface ICard {
   title: string
   description: string
   count: number
+  rating: number
   prices: IPrices
   voblers: IVoblers
   display: number
