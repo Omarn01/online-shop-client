@@ -1,24 +1,12 @@
 import clsx from 'clsx'
 import style from './Filters.module.scss'
-import { useState } from 'react'
+import { memo, useState } from 'react'
 import Checkbox from '../ui/checkbox/Checkbox'
+import Button from '../ui/button/Button'
 
-// interface IProps {
-//   check: {
-//     from10000to20000: boolean
-//     from20000to40000: boolean
-//     from40000: boolean
-//   }
-//   setCheck: () => void
-// }
-
-export default function Filters({ check, setCheck }: any) {
-  // const [check, setCheck] = useState<IProps>(checkbox)
-
+const Filters = memo(({ check, setCheck }: any) => {
   const [price, setPrice] = useState(true)
   const [company, setCompany] = useState(true)
-
-  console.log(check)
 
   return (
     <div className={style.filters}>
@@ -115,8 +103,10 @@ export default function Filters({ check, setCheck }: any) {
       </section>
 
       <section className={style.section}>
-        {/* <Button>Применить</Button> */}
+        <Button>Применить</Button>
       </section>
     </div>
   )
-}
+})
+
+export default Filters

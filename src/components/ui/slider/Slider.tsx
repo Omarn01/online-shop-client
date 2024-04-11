@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 import style from './Slider.module.scss'
 import { Link } from 'react-router-dom'
 
@@ -10,7 +10,7 @@ interface IProps {
   images: string[]
 }
 
-export default function Slider({ id, images }: IProps) {
+const Slider = memo(({ id, images }: IProps) => {
   const [slide, setSlide] = useState(0)
 
   useEffect(() => {
@@ -21,8 +21,6 @@ export default function Slider({ id, images }: IProps) {
       setSlide(images.length - 1)
     }
   }, [slide])
-
-  console.log(images.length)
 
   return (
     <div className={style.slider}>
@@ -58,4 +56,6 @@ export default function Slider({ id, images }: IProps) {
       </div>
     </div>
   )
-}
+})
+
+export default Slider

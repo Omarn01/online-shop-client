@@ -23,12 +23,16 @@
 .search_wrap {
   display: flex;
   align-items: center;
+  height: 100%;
   > input {
     width: 500px;
     border: none;
     outline: none;
     padding: 10px 15px;
     border-radius: 0 5px 5px 0;
+    background-color: #f9f9f9;
+    color: #222;
+    // border: 1px solid #0093c4;
     font-size: 22px;
     @media screen and (max-width: 1200px) {
       width: 400px;
@@ -47,7 +51,8 @@
     color: #393939;
     font-weight: 600;
     font-size: 28px;
-    height: 45.6px;
+    // height: 45.6px;
+    // height: 100%;
     width: 45px;
     cursor: pointer;
     display: flex;
