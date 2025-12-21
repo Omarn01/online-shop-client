@@ -1,0 +1,50 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 32px 0;
+}
+
+.page-btn {
+  min-width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+
+  font-size: 14px;
+  color: #111;
+  cursor: pointer;
+
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.page-btn.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+  cursor: default;
+}
+
+.page-btn:disabled {
+  opacity: 0.5; /* визуально блеклая */
+  cursor: not-allowed; /* курсор с запрещающим значком */
+  background: #f0f0f0; /* слегка серый фон */
+  border-color: #ddd; /* граница остаётся видимой */
+  color: #999;
+}
+
+.max {
+  margin-left: 20px;
+}
+
+.min {
+  margin-right: 20px;
+}

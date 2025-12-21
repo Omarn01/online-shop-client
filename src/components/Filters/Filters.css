@@ -1,0 +1,97 @@
+.filters {
+  width: 260px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  height: fit-content;
+  color: #111;
+}
+
+.filters__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+.filters__section {
+  margin-bottom: 20px;
+}
+
+.filters__label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #111;
+}
+
+.checkbox input {
+  accent-color: #4f46e5;
+  cursor: pointer;
+}
+
+.price-range {
+  display: flex;
+  gap: 8px;
+}
+
+.price-range input {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #111;
+}
+
+.price-range input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.filters__reset {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #f3f4f6;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: #111;
+}
+
+.filters__reset:hover {
+  background: #e5e7eb;
+}
+
+.price-range input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid #242424;
+  font-size: 14px;
+  color: #111; /* цвет текста */
+  background-color: #fff; /* цвет фона инпута */
+  transition: border-color 0.2s;
+}
+
+.price-range input::placeholder {
+  color: #9ca3af; /* серый цвет placeholder, чтобы был виден */
+}
+
+.price-range input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
