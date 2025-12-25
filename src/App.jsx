@@ -1,12 +1,17 @@
 import { useCallback, useEffect, useState } from 'react'
+
 import Error from './components/Error/Error'
-import './App.css'
 import Card from './components/Card/Card'
 import Pagination from './components/Pagination/Pagination'
 import ListSkeleton from './components/Skeleton/List/ListSkeleton'
 import MiniSkeleton from './components/Skeleton/MiniSkeleton/MiniSkeleton'
 import { Filters } from './components/filters/Filters'
 import SortSelect from './components/SortSelect/SortSelect'
+
+import './App.css'
+import FavoritesButton from './components/FavoritesButton/FavoritesButton'
+import { Link } from 'react-router-dom'
+import Header from './components/Layout/Header/Header'
 
 function App() {
   const [data, setData] = useState(null)
@@ -43,8 +48,6 @@ function App() {
       setIsSaleParamQuery('isSale=true')
     }
   }
-
-  const filtersByPrice = () => {}
 
   useEffect(() => {
     const fetchData = async () => {
@@ -140,6 +143,7 @@ function App() {
           ? data.map(({ id, img, title, price, isSale, oldPrice }) => (
               <Card
                 key={id}
+                id={id}
                 img={img}
                 price={price}
                 title={title}

@@ -1,0 +1,10 @@
+.productPage-wrapper {
+  display: flex;
+  gap: 50px;
+  border: 1px solid red;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100%;
+  margin: 0;
+  /* text-align: start; */
+}
