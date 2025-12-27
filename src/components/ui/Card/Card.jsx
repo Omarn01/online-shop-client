@@ -1,18 +1,14 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
-import FavoritesButton from '../FavoritesButton/FavoritesButton'
-import { useFavorites } from '../../context/FavoritesContext'
-import { useCart } from '../../context/CartContext'
+import FavoritesButton from '../../FavoritesButton/FavoritesButton'
+import { useFavorites } from '../../../context/FavoritesContext'
+import { useCart } from '../../../context/CartContext'
 
-const Card = React.memo(function Card({
-  id,
-  title,
-  price,
-  img,
-  isSale = false,
-  oldPrice = 0,
-  // toggleFavorite = 0,
-}) {
+import styles from './Card.module.scss'
+
+const Card = React.memo(function Card({ product, isCart }) {
+  const { id, img, title, price, rating, isSale, oldPrice } = product
+
   const { toggleFavorite, isFavorite } = useFavorites()
   const { addToCart } = useCart()
   return (
@@ -34,10 +30,21 @@ const Card = React.memo(function Card({
         <span className='current-price'>{price} ₽</span>
       </div>
 
+      <span className={styles.rating}>{rating}</span>
+
       <div className='actions'>
-        <button className='btn cart' onClick={() => addToCart(id)}>
-          To cart
-        </button>
+        {!isCart ? (
+          <div className={styles.counter}>
+            <button className={styles.minus}>−</button>
+            <span className={styles.count}>1</span>
+            <button className={styles.plus}>+</button>
+          </div>
+        ) : (
+          <button className='btn cart' onClick={() => addToCart(id)}>
+            To cart
+          </button>
+        )}
+
         <FavoritesButton
           id={id}
           title={title}

@@ -1,16 +1,16 @@
 import { useState } from 'react'
+import { useProductsContext } from '../features/products/model/ProductsProvider'
+
 import './SortSelect.css'
 
-const SORT_OPTIONS = [
-  { value: 'price_asc', label: 'Сначала дешевле' },
-  { value: 'price_desc', label: 'Сначала дороже' },
-  { value: 'rating_desc', label: 'По рейтингу' },
-]
+export default function SortSelect() {
+  const { sort, setSort, sortOptions } = useProductsContext()
 
-export default function SortSelect({ value = 'price_asc', onChange }) {
   const [open, setOpen] = useState(false)
-
-  const selected = SORT_OPTIONS.find(o => o.value === value)
+  const [selected, setSelected] = useState(
+    sortOptions.find(o => o.value === sort)
+  )
+  // console.log(selected)
 
   return (
     <div className='sort'>
@@ -18,7 +18,7 @@ export default function SortSelect({ value = 'price_asc', onChange }) {
         className={`sort__button ${open ? 'active' : ''}`}
         onClick={() => setOpen(prev => !prev)}
       >
-        <span>{selected?.label || 'Сортировка'}</span>
+        <span>{selected && selected.label}</span>
 
         <svg
           className={`sort__arrow ${open ? 'open' : ''}`}
@@ -36,13 +36,14 @@ export default function SortSelect({ value = 'price_asc', onChange }) {
       </button>
 
       <ul className={`sort__list ${open ? 'open' : ''}`}>
-        {SORT_OPTIONS.map((option, index) => (
+        {sortOptions?.map((option, index) => (
           <li
             key={option.value}
-            className={`sort__item ${value === option.value ? 'active' : ''}`}
+            className={`sort__item ${sort === option.value && 'active'}`}
             style={{ transitionDelay: `${index * 40}ms` }}
             onClick={() => {
-              onChange(option.value)
+              setSelected(sortOptions.find(o => o.value === option.value))
+              setSort(option.value)
               setOpen(false)
             }}
           >

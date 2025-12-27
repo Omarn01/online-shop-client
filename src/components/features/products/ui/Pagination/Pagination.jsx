@@ -1,10 +1,16 @@
-import { createArray } from '../../utils/createArray'
+import { createArray } from '../../../../../utils/createArray'
+import { useProductsContext } from '../../model/ProductsProvider'
 import './Pagination.css'
 
-function Pagination({ totalPages, currentPage, changeCurrentPage }) {
-  const pages = createArray(totalPages)
+function Pagination() {
+  const { totalPages, currentPage, setCurrentPage } = useProductsContext()
 
+  const pages = createArray(totalPages)
   let visibleTabs = pages
+
+  const changeCurrentPage = pageNumber => {
+    setCurrentPage(pageNumber)
+  }
 
   if (currentPage === 1) {
     visibleTabs = pages.slice(currentPage - 1, currentPage + 2)

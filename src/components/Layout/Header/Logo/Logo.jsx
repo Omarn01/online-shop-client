@@ -1,0 +1,13 @@
+import { Link } from 'react-router-dom'
+
+import styles from './Logo.module.scss'
+
+function Logo() {
+  return (
+    <div className={styles.logo}>
+      <Link to='/'>LOGO</Link>
+    </div>
+  )
+}
+
+export default Logo

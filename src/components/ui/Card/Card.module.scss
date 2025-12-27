@@ -1,0 +1,45 @@
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* центрируем все элементы */
+  gap: 6px; /* расстояние между кнопками и цифрой */
+  height: 36px; /* компактная высота */
+  border-radius: 8px;
+  background: #f5f5f5;
+  padding: 0 4px;
+  border: 1px solid #ccc;
+  min-width: 100px; /* чтобы счётчик не сжимался */
+}
+
+.btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background: #eaeaea;
+}
+
+.count {
+  flex: 1; /* занимает всё оставшееся пространство */
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  min-width: 20px; /* чтобы цифра точно не съехала */
+}
+
+.rating {
+  color: #222;
+  font-weight: 600;
+}

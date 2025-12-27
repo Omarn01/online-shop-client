@@ -1,5 +1,5 @@
 import { useFavorites } from '../../context/FavoritesContext'
-import Card from '../Card/Card'
+import Card from '../ui/Card/Card'
 
 export default function Favorites() {
   const { favorites, toggleFavorite } = useFavorites()
@@ -8,17 +8,8 @@ export default function Favorites() {
 
   return (
     <div>
-      {favorites.map(({ id, title, img, price, isSale, oldPrice }) => (
-        <Card
-          key={id}
-          id={id}
-          title={title}
-          img={img}
-          price={price}
-          isSale={isSale}
-          oldPrice={oldPrice}
-          toggleFavorite={toggleFavorite}
-        />
+      {favorites.map(product => (
+        <Card key={id} product={product} toggleFavorite={toggleFavorite} />
       ))}
     </div>
   )

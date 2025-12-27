@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useCart } from '../context/CartContext'
-import Card from '../components/Card/Card'
+import Card from '../components/ui/Card/Card'
 
 function CartPage() {
   const { cart } = useCart()
@@ -36,13 +36,12 @@ function CartPage() {
   }, [cart])
 
   //   if (!cart.length) return <h1>Корзина пустая</h1>
-  console.log(data)
 
   return (
     <div>
       <h1>Cart</h1>
-      {data.map(({ id, title, img, price }) => (
-        <Card key={id} id={id} title={title} img={img} price={price} />
+      {data.map(product => (
+        <Card key={product.id} product={product} />
       ))}
     </div>
   )
