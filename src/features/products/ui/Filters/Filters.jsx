@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 
-import './filters.css'
 import Brands from '../Filters/Brands/Brands'
 import { useProductsContext } from '../../model/ProductsProvider'
+
+import './filters.css'
 
 function Filters() {
   const [minPriceValue, setMinPriceValue] = useState('')

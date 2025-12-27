@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { useCart } from '../context/CartContext'
-import Card from '../components/ui/Card/Card'
+import { useCart } from '../../context/CartContext'
+import Card from '../../components/ui/Card/Card'
 
 function CartPage() {
   const { cart } = useCart()

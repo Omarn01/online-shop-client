@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 
+import { fetchBrands } from '../../../../../api/api'
+
 import styles from './Brands.module.scss'
-import { fetchBrands } from '../../../../../../api/api'
 
 function Brands({ getElementsByFetchData }) {
   const [brands, setBrands] = useState([])

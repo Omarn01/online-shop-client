@@ -42,6 +42,27 @@ export const useProducts = () => {
   ])
   const [sort, setSort] = useState<SortType>(DEFAULT_SORT)
 
+  const [searchTerm, setSearchTerm] = useState('')
+  const [searchData, setSearchData] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://1c2d1c3def58d74a.mokky.dev/smartphones?title=*${searchTerm}&_select=id,title,img`
+        )
+        const json = await response.json()
+
+        if (!response.ok) {
+          throw new Error(json.message)
+        }
+        setSearchData(json)
+      } catch (error) {}
+    }
+
+    fetchData()
+  }, [searchTerm])
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -106,6 +127,9 @@ export const useProducts = () => {
     setBrandParamQuery,
     setSelectedIsSale,
     setSort,
+    setSearchTerm,
+    searchData,
+    searchTerm,
     sort,
     sortOptions,
     selectedIsSale,

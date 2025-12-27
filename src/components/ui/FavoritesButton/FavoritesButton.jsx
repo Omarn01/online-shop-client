@@ -1,6 +1,6 @@
 import './FavoritesButton.css'
 
-import { useLocalStorage } from '../../hooks/useLocalstorage'
+import { useLocalStorage } from '../../../hooks/useLocalStorage'
 
 function FavoritesButton({
   value,

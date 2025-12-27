@@ -1,0 +1,12 @@
+# Filters
+
+1. Reset button
+2. Price filter delay
+
+# Search
+
+# Cart
+
+# Favorites
+
+1. UI

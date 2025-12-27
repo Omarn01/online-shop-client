@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useProductsContext } from '../features/products/model/ProductsProvider'
+import { useProductsContext } from '../../../features/products/model/ProductsProvider'
 
 import './SortSelect.css'
 

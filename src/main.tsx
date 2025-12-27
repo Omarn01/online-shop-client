@@ -7,7 +7,7 @@ import './index.css'
 
 import AppRoutes from './AppRoutes.jsx'
 import { CartProvider } from './context/CartContext.jsx'
-import { ProductsProvider } from './components/features/products/model/ProductsProvider.js'
+import { ProductsProvider } from './features/products/model/ProductsProvider.js'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

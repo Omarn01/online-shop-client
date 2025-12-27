@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
 import React from 'react'
-import FavoritesButton from '../../FavoritesButton/FavoritesButton'
+import FavoritesButton from '../../../components/ui/FavoritesButton/FavoritesButton'
+import { Link } from 'react-router-dom'
 import { useFavorites } from '../../../context/FavoritesContext'
 import { useCart } from '../../../context/CartContext'
 

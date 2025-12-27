@@ -1,8 +1,8 @@
-import ListSkeleton from '../../../../ui/Skeleton/List/ListSkeleton.jsx'
-import Card from '../../../../ui/Card/Card.jsx'
+import ListSkeleton from '../../../../components/ui/Skeleton/List/ListSkeleton.jsx'
+import Card from '../../../../components/ui/Card/Card.jsx'
 import { useProductsContext } from '../../model/ProductsProvider.js'
 
-import { useCart } from '../../../../../context/CartContext.jsx'
+import { useCart } from '../../../../context/CartContext.jsx'
 
 function ProductList() {
   const { data, isLoading } = useProductsContext()

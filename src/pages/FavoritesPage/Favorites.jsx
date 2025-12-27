@@ -1,5 +1,5 @@
 import { useFavorites } from '../../context/FavoritesContext'
-import Card from '../ui/Card/Card'
+import Card from '../../components/ui/Card/Card'
 
 export default function Favorites() {
   const { favorites, toggleFavorite } = useFavorites()

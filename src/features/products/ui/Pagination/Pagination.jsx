@@ -1,5 +1,6 @@
-import { createArray } from '../../../../../utils/createArray'
+import { createArray } from '../../../../utils/createArray'
 import { useProductsContext } from '../../model/ProductsProvider'
+
 import './Pagination.css'
 
 function Pagination() {
